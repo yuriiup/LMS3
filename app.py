@@ -10,8 +10,8 @@ def mars1():
 
 
 @app.route('/astronaut_selection')
-def astronaut_selection():
-    return render_template('astonaut_selection.html')
+def two_params(nickname, level=0, rating=0.0):
+    return render_template('results.html', nickname=nickname, level=level, rating=rating)
 
 
 if __name__ == '__main__':
