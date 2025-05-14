@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отбор астронавтов</title>
+    <style>
+        form
+        {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 450px;
+            background-color: #F6E7CB;
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        h1
+        {
+        text-align:center;
+        }
+
+        h2
+        {
+        text-align:center;
+        font size="5"
+        }
+    </style>
+</head>
+<body>
+<h1>Загрузка фотографии</h1>
+<h2>для участия в миссии</h2>
+<form action="{{ url_for('sample_file_upload') }}" enctype="multipart/form-data" method="POST">
+    <div style="margin-bottom: 30px">Приложите фотографию</div>
+        <input name="img" type="file"/>
+        <img src="{{img}}" width="300" style="margin-bottom: 10px"/>
+    <div></div>
+    <button type="submit" class="btn btn-success">Отправить</button>
+</form>
+</body>
+</html>
