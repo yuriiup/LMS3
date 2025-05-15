@@ -21,7 +21,7 @@ def two_params(nickname, level=0, rating=0.0):
 
 
 @app.route('/carousel')
-def sample_file_upload():
+def carousel():
     return render_template('carousel.html')
 
 
