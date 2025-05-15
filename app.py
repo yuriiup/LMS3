@@ -15,7 +15,7 @@ def astronaut_selection():
     return render_template('astronaut_selection.html')
 
 
-@app.route('/results')
+@app.route('/results/<nickname>/<int:level>/<float:rating>')
 def two_params(nickname, level=0, rating=0.0):
     return render_template('results.html', nickname=nickname, level=level, rating=rating)
 
@@ -29,7 +29,7 @@ upload_folder = os.path.join('static', 'img')
 app.config['img'] = upload_folder
 
 
-@app.route('/sample_file_upload', methods=['POST', 'GET'])
+@app.route('/load_photo', methods=['POST', 'GET'])
 def sample_file_upload():
     if request.method == 'POST':
         file = request.files['img']
