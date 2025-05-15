@@ -12,7 +12,7 @@ def mars1():
 
 @app.route('/astronaut_selection')
 def astronaut_selection():
-    return render_template('astonaut_selection.html')
+    return render_template('astronaut_selection.html')
 
 
 @app.route('/results')
